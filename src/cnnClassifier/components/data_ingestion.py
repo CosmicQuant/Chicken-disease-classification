@@ -10,6 +10,7 @@ from pathlib import Path
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
         self.config = config
+        
 
 
     
@@ -21,7 +22,7 @@ class DataIngestion:
             )
             logger.info(f"{filename} download! with following info: \n{headers}")
         else:
-            logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")  
+            logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")   
 
 
     
